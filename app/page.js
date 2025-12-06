@@ -141,6 +141,14 @@ export default function Home() {
             <p className="text-lg md:text-xl text-white/80 font-medium max-w-2xl mx-auto italic">
               Blood of my blood. The legacy continues.
             </p>
+            <div className="mt-6 flex flex-wrap justify-center gap-4">
+              <span className="px-4 py-2 rounded-full bg-amber-500/20 border border-amber-500/50 text-amber-500 font-bold uppercase text-sm backdrop-blur-md">
+                Triple Conqueror
+              </span>
+              <span className="px-4 py-2 rounded-full bg-red-500/20 border border-red-500/50 text-red-500 font-bold uppercase text-sm backdrop-blur-md">
+                World Record: 250+ Consecutive CD
+              </span>
+            </div>
           </div>
         </motion.div>
       </section>
@@ -167,6 +175,6 @@ export default function Home() {
         </div>
       </section>
 
-    </div>
+    </div >
   )
 }
