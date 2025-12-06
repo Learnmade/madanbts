@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { min } from "moment" // Not used, removing
+
 import { X } from "lucide-react"
 
 export function CreateEventModal({ isOpen, onClose, onCreated }) {

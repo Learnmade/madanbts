@@ -1,0 +1,39 @@
+
+> bts-war@0.1.0 build
+> next build
+
+   Γû▓ Next.js 16.0.7 (Turbopack)
+   - Environments: .env.local
+
+   Creating an optimized production build ...
+
+> Build error occurred
+Error: Turbopack build failed with 1 errors:
+./components/CreateEventModal.js:4:1
+Module not found: Can't resolve 'moment'
+  2 |
+  3 | import { useState } from "react"
+> 4 | import { min } from "moment" // Not used, removing
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { X } from "lucide-react"
+  6 |
+  7 | export function CreateEventModal({ isOpen, onClose, onCreated }) {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/CreateEventModal.js [Client Component Browser]
+    ./app/tryouts/page.js [Client Component Browser]
+    ./app/tryouts/page.js [Server Component]
+
+  Client Component SSR:
+    ./components/CreateEventModal.js [Client Component SSR]
+    ./app/tryouts/page.js [Client Component SSR]
+    ./app/tryouts/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (./components/CreateEventModal.js:4:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
