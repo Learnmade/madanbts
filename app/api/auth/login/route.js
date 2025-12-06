@@ -18,6 +18,10 @@ export async function POST(req) {
         }
 
         // Check password
+        if (!user.password) {
+            return NextResponse.json({ message: 'Invalid credentials (no password set)' }, { status: 400 });
+        }
+
         const isMatch = await bcrypt.compare(password, user.password);
         if (!isMatch) {
             return NextResponse.json({ message: 'Invalid credentials' }, { status: 400 });
@@ -54,6 +58,6 @@ export async function POST(req) {
 
     } catch (error) {
         console.error('Login error:', error);
-        return NextResponse.json({ message: 'Server error' }, { status: 500 });
+        return NextResponse.json({ message: 'Server error', error: error.message }, { status: 500 });
     }
 }
